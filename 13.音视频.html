@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>音视频</title>
+</head>
+<body>
+
+<!--
+    audio 标签用来向页面中引入一个外部的音频文件
+        音视频文件引入时，默认情况下不允许用户自己控制播放停止
+    属性:
+        controls 是否允许用户控制播放
+        autoplay 音频文件是否自动播放
+            - 如果设置了 autoplay 则音乐在打开页面时自动播放
+                但是目前来讲，大部分浏览器都不会对音乐进行播放
+        loop 是否循环播放
+
+-->
+<!--<audio src="" controls autoplay></audio>-->
+
+<!--
+    还可以通过 source 来指定
+    不支持的浏览器会显示提示文字
+
+    可以指定多个 source, 解决音频格式兼容性问题
+-->
+<audio controls>
+    对不起，您的浏览器不支持播放音频！请升级浏览器！
+    <source src="">
+    <source src="">
+    <source src="">
+</audio>
+
+
+<!--
+    embed 标签会自动播放
+    ie8 会使用 windows media 播放
+-->
+<embed src="" type="audio/mp3" width="300" height="100">
+
+<!--
+    有了 embed 就没有兼容问题了，可以去掉问题提示
+-->
+<audio controls>
+    <source src="">
+    <source src="">
+    <source src="">
+    <embed src="" type="audio/mp3" width="300" height="100">
+</audio>
+
+
+<!--
+    使用 video 标签向网页中引入一个视频文件
+        - 使用方式和 audio 基本一致
+-->
+<video>
+    <source src="">
+    <source src="">
+    <source src="">
+    <embed src="" type="video/mp4">
+</video>
+
+</body>
+</html>
