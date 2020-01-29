@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>超链接</title>
+</head>
+<body>
+
+<!--
+    target 属性：用来指定超链接打开的位置
+        可选值：
+            _self 默认值，当前页面中打开超链接
+            _blank 在一个新的页面中打开超链接
+
+-->
+<a href="07.列表.html" target="_blank">07.列表</a>
+
+<br><br>
+
+<a href="#bottom">去底部</a>
+
+<!--
+    可以使用 javascript:; 来作为 href 的属性，此时点击这个超链接什么也不会发生
+-->
+<a href="javascript:;">没有任何作用的 a 标签</a>
+
+<br><br>
+<!--
+    回到顶部
+    直接将超链接的 href 属性设置为 #，页面不会发生跳转，而是转到当前页面的顶部位置
+
+    id 属性(唯一不重复)
+-->
+<a id="bottom" href="#">回到顶部</a>
+</body>
+</html>
