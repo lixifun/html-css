@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>伪类选择器</title>
+
+    <style>
+
+        /*
+            将 ul 里的第一个 li 设置为红色
+            缺陷，当在前面加元素的时候，还需要更改 class 位置
+         */
+        /*        ul > li.first {
+                    color: red;
+                }*/
+
+        /*
+            伪类(不存在的类, 特殊的类)
+                - 伪类用来描述一个元素的特殊状态
+                    比如： 第一个子元素、被点击的元素、鼠标移入的元素...
+
+                    :first-child 第一个子元素
+                    :last-child 最后一个子元素
+                    :nth-child() 选中第 n 个子元素
+                        特殊值:
+                            n 第 n 个, n 的取值范围从 0 到 正无穷
+                            2n 或 even 表示选中偶数位的元素
+                            2n+1 或 odd 表示选中奇数位的元素
+
+                        - 以上这些伪类都是根据所有的子元素进行排序的
+
+                    :first-of-type
+                    :last-of-type
+                    :nth-of-type()
+                        - 这几个伪类的功能和上述的类似，不同点是他们在同类型元素中进行排序
+
+                - :not() 否定伪类
+                    - 将符合条件的元素从选择器中去除
+
+         */
+        /*        ul > li:first-of-type {
+                    color: red;
+                }
+
+                ul > li:last-child {
+                    color: orange;
+                }
+
+                ul > li:nth-child(odd) {
+                    color: skyblue;
+                }*/
+
+
+        ul > li:not(:nth-child(3)) {
+            color: yellowgreen;
+        }
+    </style>
+</head>
+<body>
+
+
+<ul>
+    <!--<li class="first">第一个</li>-->
+    <!--<span>我是一个 span</span>-->
+    <li>第零个</li>
+    <li>第一个</li>
+    <li>第二个</li>
+    <li>第三个</li>
+    <li>第四个</li>
+    <li>第五个</li>
+</ul>
+
+
+</body>
+</html>
