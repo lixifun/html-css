@@ -8,7 +8,7 @@
 
         #box1 {
             color: orange;
-            background-color: red;
+            background-color: red !important;
         }
 
         div#box1 {
@@ -39,6 +39,8 @@
             选择器的累加不会超过其最大的数量级，类选择器再高也不会超过 id 选择器
             如果优先级计算后相同。此时则优先使用靠下的样式
 
+            可以在某一个样式的后边添加 !important, 则此时该样式会获取到最高的优先级，甚至超过内联样式
+                注意: 在开发中，慎用!
 
          */
 
@@ -54,7 +56,7 @@
 </head>
 <body>
 
-<div id="box1" class="red">我是一个 div</div>
+<div id="box1" class="red" style="background-color: orange">我是一个 div</div>
 
 </body>
 </html>
