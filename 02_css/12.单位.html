@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>单位</title>
+    <style>
+
+        html {
+            /*
+                rem 参照 html 的字体大小来改变的
+            */
+            font-size: 30px;
+        }
+
+        .box1 {
+            /*
+                长度单位:
+                    像素
+                        - 显示设备实际上是由一个一个像素点构成的
+                        - 不同屏幕的像素大小是不同的，像素点越小的屏幕显示效果越细腻
+                        - 所以同样的 200 像素在不同的设备下显示效果不一样
+
+                    百分比
+                        - 也可以将属性值设置为相对于其父元素的百分比
+                        - 设置百分比可以使子元素跟随父元素的改变而改变
+
+                    em
+                        - em 是相对于元素的字体大小来计算的
+                        - 1em = 1font-size
+                        - em 会根据字体大小的改变而改变
+
+                    rem (root em)
+                        - rem 相对于根元素的字体大小来计算的
+
+             */
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+        }
+
+        .box2 {
+            width: 50%;
+            height: 50%;
+            background-color: aqua;
+        }
+
+        .box3 {
+            /* em 随着 font-size 改变而改变*/
+            font-size: 30px;
+            /*            width: 10em;
+                        height: 10em;*/
+
+            width: 10rem;
+            height: 10rem;
+            background-color: greenyellow;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box1">
+    <div class="box2"></div>
+</div>
+
+<div class="box3"></div>
+</body>
+</html>
