@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>w3 导航条</title>
+    <link rel="stylesheet" href="./css/reset.css">
+
+    <style>
+        .nav {
+            width: 1210px;
+            height: 48px;
+
+            background-color: #e8e7e3;
+
+            /* 居中 */
+            margin: 100px auto;
+        }
+
+        .nav li {
+            float: left;
+            /*height: 48px;*/
+            /* 将文字在父元素中垂直居中 */
+            line-height: 48px;
+        }
+
+        .nav a {
+            /* 将 a 转换为块元素*/
+            display: block;
+            padding: 0 39px;
+
+            color: #777;
+            font-size: 18px;
+            text-decoration: none;
+        }
+
+        .nav a:hover {
+            color: #e8e7e3;
+            background-color: #3f3f3f;
+        }
+
+        .nav li:last-child a {
+            padding: 0 42px 0 41px;
+        }
+
+    </style>
+</head>
+<body>
+
+<ul class="nav">
+    <li>
+        <a href="#">HTML<span>/</span>CSS</a>
+    </li>
+    <li>
+        <a href="#">Browser Side</a>
+    </li>
+    <li>
+        <a href="#">Server Side</a>
+    </li>
+    <li>
+        <a href="#">Programming</a>
+    </li>
+    <li>
+        <a href="#">XML</a>
+    </li>
+    <li>
+        <a href="#">Web Building</a>
+    </li>
+    <li>
+        <a href="#">Reference</a>
+    </li>
+</ul>
+
+
+</body>
+</html>
