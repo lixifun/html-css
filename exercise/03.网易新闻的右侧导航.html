@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网易新闻的右侧导航</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+
+        body {
+            background-color: #bfa;
+        }
+
+        /* 统一去除下划线 */
+        a {
+            text-decoration: none;
+        }
+
+        /* 设置容器的样式 */
+        .news-wrapper {
+            width: 300px;
+            height: 358px;
+
+            /* 设置居中 */
+            margin: 50px auto;
+
+            background-color: #fff;
+
+            border-top: 1px solid #ddd;
+        }
+
+        .news-title {
+            /* 为了边框和文字一直, 需要将 h2 转换为行内块元素 */
+            display: inline-block;
+            height: 30px;
+            /* 设置上边框 */
+            border-top: 1px solid red;
+            /* 通过 margin-top 将 h2 上移, 盖住上边框 */
+            margin-top: -1px;
+            padding-top: 10px;
+        }
+
+        /* 设置 title 中的超链接的样式 */
+        .news-title a {
+
+            color: #40406B;
+            /* 加粗 */
+            font-weight: bold;
+        }
+
+        .news-img {
+            height: 150px;
+        }
+
+        .news-img img{
+            width: 100%;
+            height: 150px;
+        }
+
+        /* 设置图片的文字效果 */
+        .news-img .img-title {
+            /* 向上移动文字 */
+            margin-top: -30px;
+            /* 向右移动文字 */
+            padding-left: 30px;
+            /* 设置字体颜色 */
+            color: #fff;
+            /* 设置加粗 */
+            font-weight: bold;
+
+        }
+
+        .news-list {
+            margin-top: 20px;
+            /*padding-left: 14px;*/
+
+            /* 设置项目符号, 不同浏览器不同, 临时方案 */
+            /*list-style: square;*/
+        }
+
+        .news-list li:not(:last-child) {
+            /* 距离拉开 */
+            margin-bottom: 17px;
+        }
+
+        .news-list li a {
+            font-size: 14px;
+            color: #666;
+        }
+
+        .news-list li a:hover {
+            color: red;
+        }
+
+        /* 通过 before 伪元素, 来为每一个 li 添加*/
+        .news-list li::before {
+            content: "■";
+            margin-right: 4px;
+            color: #777;
+            font-size: 12px;
+        }
+
+
+    </style>
+</head>
+<body>
+
+<!-- 创建新闻列表的外侧的容器 -->
+<div class="news-wrapper">
+    <!-- 创建一个标题标签 -->
+    <h2 class="news-title">
+        <a href="#">体育</a>
+    </h2>
+
+    <!-- 创建一个图片的容器 -->
+    <div class="news-img">
+        <a href="#">
+            <img src="./img/3/1.jpg" alt="海拉组合三年两夺冠女双冠军">
+
+            <!-- 创建图片标题 -->
+            <h3 class="img-title">
+                海拉组合三年两夺冠女双冠军
+            </h3>
+        </a>
+    </div>
+
+    <!-- 新闻列表 -->
+    <ul class="news-list">
+        <li>
+            <a href="#">乔治:我爱LA 喜欢和LBJ一起打球</a>
+        </li>
+        <li>
+            <a href="">格林:3年前降薪就在等KD 特制T恤嘲讽LBJ</a>
+        </li>
+        <li>
+            <a href="">塔克4000双鞋让保罗羡慕嫉妒 乔丹被震惊</a>
+        </li>
+        <li>
+            <a href="">CBA下季新赛制:常规赛4组循环 增至46轮</a>
+        </li>
+
+    </ul>
+
+</div>
+
+</body>
+</html>
