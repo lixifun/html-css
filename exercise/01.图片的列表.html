@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>图片的列表</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /*
+            设置 body 的背景颜色
+         */
+        body {
+            background-color: antiquewhite;
+        }
+
+        /*
+            设置外部 ul 的宽度
+         */
+        .img-list {
+            /*
+                图片尺寸实际超出了
+             */
+            width: 190px;
+            height: 470px;
+
+            /*
+                裁剪溢出的内容
+             */
+            overflow: hidden;
+
+            /*
+                使 ul 在页面中居中
+             */
+            margin: 50px auto;
+            background-color: #F4F4F4;
+        }
+
+        /*
+            设置 li 的位置
+         */
+        .img-list li:not(:last-child) {
+            margin-bottom: 9px;
+        }
+
+        /*
+            设置图片的大小
+         */
+        .img-list img {
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+
+<!--<div>
+    <img src="" alt="">
+    <img src="" alt="">
+    <img src="" alt="">
+</div>-->
+
+<ul class="img-list">
+    <li>
+        <a href="javascript:;">
+            <img src="./img/1/1.jpg" alt="">
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;">
+            <img src="./img/1/2.jpg" alt="">
+        </a>
+    </li>
+    <li>
+        <a href="javascript:;">
+            <img src="./img/1/3.jpg" alt="">
+        </a>
+    </li>
+</ul>
+
+</body>
+</html>
