@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>高度塌陷的最终方案</title>
+
+    <style>
+        .box1 {
+            border: 10px solid red;
+
+            /* 开启 BFC */
+            /*overflow: hidden;*/
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            float: left;
+            background-color: #bfa;
+        }
+
+        /* after 伪元素默认为行内元素 */
+        .box1::after {
+            display: block;
+            content: '';
+            clear: both;
+        }
+
+        .box3 {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+
+<div class="box1">
+    <div class="box2"></div>
+    <!-- 用结构来解决表现问题 -->
+    <!--<div class="box3"></div>-->
+
+
+</div>
+</body>
+</html>

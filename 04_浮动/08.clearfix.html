@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>clearfix</title>
+
+    <style>
+        .box1 {
+            width: 200px;
+            height: 200px;
+            background-color: #bfa;
+        }
+
+        .box1::before {
+            content: '';
+            /* table 可以隔开两个外边距 */
+            display: table;
+        }
+
+        .box2 {
+            width: 100px;
+            height: 100px;
+            background-color: orange;
+
+            margin-top: 100px;
+        }
+
+        /* 解决 外边距重叠问题  和  高度塌陷问题 */
+        .clearfix::before,
+        .clearfix::after {
+            content: '';
+            display: table;
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div class="box1">
+    <div class="box2"></div>
+</div>
+
+</body>
+</html>
