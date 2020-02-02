@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>字体的简写属性</title>
+
+    <style>
+        div {
+            border: 1px red solid;
+
+            line-height: 2;
+
+            /*
+                font 可以设置字体相关的所有属性
+                    语法:
+                        font: 字体大小/行高(可选) 字体族
+                        行高可以省略不写, 省略不写不是不设置, 有默认值 (normal, 不是 1.333)
+                        会覆盖掉上面的 line-height
+             */
+            /*            font-size: 50px;
+                        font-family: 'Times New Roman', Times, serif;*/
+
+            font: bold italic 50px/2 '微软雅黑', 'Times New Roman', Times, serif;
+
+            /* 下面的简写 */
+            /*font: 50px/2 '微软雅黑', 'Times New Roman', Times, serif;*/
+            /*font: normal normal 50px/2 '微软雅黑', 'Times New Roman', Times, serif;*/
+
+            font-size: 50px;
+
+            /*
+                字重 字体的加粗
+                    可选值:
+                        normal 默认值 不加粗
+                        bold 加粗
+                        100-900 九个级别
+
+                    font-style 字体风格
+                        normal 正常的
+                        italic 斜体
+             */
+            font-weight: 100;
+
+            font-style: italic;
+        }
+    </style>
+</head>
+<body>
+
+<div>今天天气真不错 Hello world</div>
+
+</body>
+</html>
