@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动画</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            width: 800px;
+            height: 800px;
+            background-color: silver;
+            /*解决外边距重叠*/
+            overflow: hidden;
+        }
+
+        .box1 div {
+            width: 100px;
+            height: 100px;
+            margin-bottom: 100px;
+        }
+
+        .box2 {
+            background-color: #bfa;
+            /*transition: 2s*/
+
+            /*
+                animation-name 要对当前元素生效的关键帧的名字
+             */
+            animation-name: test;
+
+            /*
+                animation-duration 动画的执行时间
+             */
+            animation-duration: 4s;
+
+            /*
+                animation-delay 动画的延时
+             */
+            animation-delay: 2s;
+
+            animation-timing-function: ease-in-out;
+
+            /*
+                animation-iteration-count 迭代重复次数
+                    可选值:
+                        infinite 无限执行
+
+
+             */
+            animation-iteration-count: 2;
+
+            /*
+                animation-direction 控制执行方向
+                    可选值:
+                        normal 默认值, 从 from 到 to
+                        reverse 反向执行, 从 to 到 from
+                        alternate 从 from 到 to, 重复执行时 反向执行
+                        alternate-reverse 从 to 到 from, 重复执行时 反向执行
+             */
+            animation-direction: alternate-reverse;
+
+            /*
+                animation-play-state 动画的执行状态
+                    可选值:
+                        running 默认值, 动画执行
+                        paused 动画暂停
+             */
+            /*animation-play-state: running;*/
+
+            /*
+                animation-fill-mode 动画的填充模式
+                    可选值:
+                        none 默认值, 执行完以后回到开始位置
+                        forwards 动画执行完毕元素会停止在动画结束的位置
+                        backwards 动画延时等待时, 元素就会处于开始位置
+                        both = forwards + backwards
+             */
+            animation-fill-mode: both;
+        }
+
+        .box1:hover .box2 {
+            animation-play-state: paused;
+        }
+
+        .box3 {
+            background-color: orange;
+
+            transition-property: all;
+            transition-duration: 2s;
+        }
+
+        /*.box1:hover div {*/
+            /*margin-left: 700px;*/
+        /*}*/
+
+        /*
+            动画：
+                动画和过渡类似, 都是可以实现一些过渡的效果
+                    不同的是过渡需要再某个属性发生变化时才会触发
+                    东湖啊可以出发动态效果
+
+                设置动画效果, 必须先要设置一个关键帧, 关键帧设置了动画执行的每一个步骤
+         */
+        @keyframes test {
+            /*
+                表示动画的开始位置 也可以使用 0%
+             */
+            from {
+                margin-left: 0;
+                background-color: orange;
+            }
+
+            /*
+                表示动画的结束位置 也可以使用 100%
+             */
+            to {
+                margin-left: 700px;
+                background-color: red;
+            }
+        }
+
+
+    </style>
+</head>
+<body>
+
+<div class="box1">
+    <div class="box2"></div>
+    <!--<div class="box3"></div>-->
+</div>
+
+</body>
+</html>
