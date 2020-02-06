@@ -1,0 +1,85 @@
+.box1 {
+  .box2 {
+    background-color: #bfa;
+  }
+
+  > .box3 {
+    background-color: red;
+
+    &:hover {
+      color: red;
+    }
+  }
+
+  // & 表示外层的父元素
+  &:hover {
+    color: orange;
+  }
+
+  div & {
+
+  }
+}
+
+.p1 {
+  width: 100px;
+  height: 200px;
+}
+
+// :extend() 对当前选择器指定选择器的样式(选择器分组)
+.p2:extend(.p1) {
+  color: red;
+}
+
+.p3 {
+  // 直接对指定的样式进行引用, 这里相当于对 p1 的样式进行了复制
+  // mixin, 性能会差一些
+  .p1();
+}
+
+// 使用类选择器时, 可以在选择器后面添加一个括号, 这是实际上就创建了一个 mixins
+.p4() {
+  width: 100px;
+  height: 100px;
+  background-color: #bfa;
+}
+
+.p5 {
+  // 或者 .p4
+  .p4();
+}
+
+// 混合函数
+.test(@w:100px, @h:200px, @border-color:red) {
+  width: @w;
+  height: @h;
+  border: 1px solid @border-color;
+}
+
+div {
+  // 调用混合函数
+  //.test(100px, 100px, red);
+  .test(@border-color: red, @w: 200px, @h: 200px);
+}
+
+span {
+  //color: average(red, yellow);
+  color: average(red, blue);
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-color: #bfa;
+
+}
+
+body:hover {
+  // 颜色加深
+  background-color: darken(#bfa, 20%);
+}

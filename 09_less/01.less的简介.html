@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>less的简介</title>
+    <style>
+        html {
+            /**
+                css 原生支持变量设置
+             */
+            --color: #bfa;
+            --length: 200px;
+        }
+
+        .box1 {
+            /* calc() 计算函数*/
+            width: calc(1000px / 2);
+            height: var(--length);
+            background-color: var(--color);
+        }
+
+        .box2 {
+            width: var(--length);
+            height: var(--length);
+            color: var(--color);
+        }
+
+        .box3 {
+            width: var(--length);
+            height: var(--length);
+            border: 10px solid var(--color);
+        }
+
+    </style>
+</head>
+<body>
+<!--
+    less 是一门 css 的预处理语言
+        - less 是一个 css 的增强版, 通过 less 可以编写更少的代码实现更强大的样式
+-->
+
+<div class="box1">1</div>
+<div class="box2">2</div>
+<div class="box3">3</div>
+
+</body>
+</html>
