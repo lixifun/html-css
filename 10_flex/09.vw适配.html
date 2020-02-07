@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>vw适配</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        html {
+            /*
+                网页中字体大小最小是 12px, 不能设置比 12px 还小的字体
+                如果设置了小于 12px 的字体, 则字体自动设置为 12
+
+                0.1333333vm = 1px
+                1.3333333vm = 10px
+                5.3333333vm = 40px
+            */
+            font-size: 5.333vw;
+        }
+
+        .box1 {
+            /*
+                1 rem = 1html 的字体大小
+                1 rem = 40px(像素)
+             */
+            width: 1.2rem;
+            height: 0.875rem;
+            background-color: #bfa;
+        }
+    </style>
+</head>
+<body>
+
+<!--
+    48px x 35px
+-->
+<div class="box1"></div>
+
+</body>
+</html>

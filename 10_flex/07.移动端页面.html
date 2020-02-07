@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <!--设置视口大小-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>移动端页面</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .box1 {
+            width: 100px;
+            height: 100px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+<!--
+    移动端默认视口大小 980px(CSS 像素)
+        默认情况下, 移动端的像素比就是 980/移动端宽度 (980/750)
+        如果直接在网页中编写移动端代码, 在 980 视口上, 像素比非常不友好, 导致网页中的内容非常小
+
+        编写移动页面时, 必须确保有一个比较合理的像素比
+        1 css 像素对应 2 个物理像素
+        1 css 像素对应 3 个物理像素
+
+        将像素比设置为最佳像素比的视口大小我们称其完美视口
+-->
+<div class="box1"></div>
+
+</body>
+</html>

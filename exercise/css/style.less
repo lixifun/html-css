@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+@total-width: 750;
+@rate: 40;
+@center-width: 693rem/@rate;
+
+.w {
+  width: 693rem/@rate;
+  margin: 0 auto;
+}
+
+// 设置根元素
+html {
+  font-size: 100vm/@total-width * @rate;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+}
+
+// 设置头部
+.top-bar:extend(.w) {
+  // 开启弹性容器
+  display: flex;
+  // 设置高度
+  height: 175rem/@rate;
+  line-height: 175rem/@rate;
+  // 设置对齐方式
+  justify-content: space-between;
+  // 设置辅轴的对齐方式
+  align-items: center;
+
+  a {
+    color: #24253d;
+    font-size: 50rem/@rate;
+
+    i {
+      color: #999;
+      font-size: 40rem/@rate;
+    }
+  }
+}
+
+.banner:extend(.w) {
+  img {
+    width: 100%;
+  }
+}
+
+.menu:extend(.w) {
+  // 确定元素的高度
+  height: 329rem/@rate;
+
+  // 设置弹性元素
+  display: flex;
+  // 设置换行
+  flex-flow: row wrap;
+  // 设置对齐方式
+  justify-content: space-between;
+  // 设置辅轴方向对齐方式
+  align-content: space-evenly;
+
+  // 设置框的大小
+  a {
+    width: 327rem/@rate;
+    height: 104rem/@rate;
+    line-height: 104rem/@rate;
+    color: #fff;
+
+    border-radius: 10rem/@rate;
+
+    i {
+      margin: 0 28rem/@rate 0 38rem/@rate
+    }
+  }
+
+  .course {
+    background-color: #f97053;
+  }
+
+  .star {
+    background-color: #cd6efe;
+  }
+
+  .sub {
+    background-color: #fe4479;
+  }
+
+  .download {
+    background-color: #1bc4fb;
+  }
+
+}
+
+// 设置课程列表
+.course-list:extend(.w) {
+  .title {
+    display: flex;
+    // 主轴的空间
+    justify-content: space-between;
+    // 辅轴的对齐方式
+    align-items: center;
+  }
+
+  h2 {
+    font-size: 33rem/@rate;
+    color: #24243d;
+    padding-left: 4px;
+    border-left: 1px solid #3a84ff;
+  }
+}
+
+.user-info {
+  display: flex;
+  align-items: center;
+}
+
+// 设置课程的列表项
+.item {
+  box-sizing: border-box;
+  width: 320rem/@rate;
+  height: 324rem/@rate;
+  padding: 0 22rem/@rate;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .3);
+
+  border-radius: 10rem/@rate;
+
+  justify-content: space-evenly;
+
+  img {
+    width: 100%;
+    vertical-align: top;
+  }
+
+  .course-title {
+    font-size: 32rem/@rate;
+    color: #24253d;
+  }
+
+  .avatar {
+    width: 42rem/@rate;
+    height: 42rem/@rate;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  .nickname {
+    margin-left: 6px;
+    font-size: 24rem/@rate;
+    color: #969393;
+  }
+}
+
+
+
+
